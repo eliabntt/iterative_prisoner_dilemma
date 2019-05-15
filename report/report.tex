@@ -71,8 +71,9 @@
     \IEEEauthorblockA{Department of Information Engineering, University of Padova -- Via Gradenigo, 6/b, 35131 Padova, Italy\\
     Email: {\tt\{bonettoe,rigottof,attanasiol,saviofranc\}@dei.unipd.it}}
 }
-\markboth{Laboratory of Computational Physics, Fall 2018}%
+\markboth{High Level Programming -- Computational Physics Lab, Fall 2018}%
     {Bonetto \MakeLowercase{\textit{et al.}}: A study on the Iterated Prisoner's Dilemma}
+\IEEEpubid{\raisebox{-1.1pt}{\includegraphics[height=7.5pt]{by-sa}} \copyright~2019 The authors. Licensed under \href{https://creativecommons.org/licenses/by-sa/4.0/deed.en}{Creative Commons Attribution -- ShareAlike 4.0}}
 
 \maketitle
 %%%%%%%%%%
@@ -116,6 +117,7 @@ T>R>P>S; \quad 2R > T+S
 $$
 For example, $T=3$, $R=2$, $P=1$ and $S=0$, or  $T=5$, $R=3$, $P=1$, $S=0$, the default for all our experiments.
 
+\IEEEpubidadjcol
 $R$ is returned for both players if they both cooperate, $P$ if they both defect; if the two players' actions differ, $S$ is for the player who cooperated and $T$ is for the one who defected.
 
 Similarly, each player's choice (move or action) for a single round can be represented by one of the two axis in $\mathbb{R}^2$, i.e. $u_C=\begin{pmatrix} 1 \\ 0 \end{pmatrix}$ or $u_D=\begin{pmatrix} 0 \\ 1 \end{pmatrix}$, where the first axis stands for \textit{Cooperate} and the second for \textit{Defect}. Being $u_1$ and $u_2$ the moves of the first and second player respectively, their rewards $r_1$ and $r_2$ can then be computed as:
@@ -163,7 +165,7 @@ Many more and much complicated strategies could be analyzed and our implementati
 \section{Two players IPD} \label{s:IPD2P}
 In this section, the IPD intercourse between two players is evaluated: each player has an assigned strategy, he is unaware of the opponent's way of acting and he plays accordingly to its strategy definition without the possibility to change it. Both players know only their respective history of choices. Each game is repeated for a fixed number of rounds, unknown to the two players. The main metric evaluated as output of this game is the winner, or in other words the one who achieves a higher payoff at the end of the round.
 
-The number of iterations is set to \texttt{NUM\_ITER = 50} and can be modified by means of a simple option when launching the program.
+The number of iterations is set to 50 and can be modified by means of a simple option when launching the program.
 This could also be seen as the number of moves during the match, and is a factor unknown to the players; if otherwise, a smart player could adopt a supposedly optimal strategy: for example, against a \textit{Nice} (or \textit{TfT}) strategy the best choice of action would be to cooperate in all but the last round, gaining advantage from knowing the number of runs, as inferred from a \textit{backward induction} reasoning.
 Results do not depend on this value if only deterministic strategies are employed; conversely, it will slightly influence the random ones.
 Note that in every simulation an optional \textit{seed} value can be fixed, so as to have reproducible results from the pseudo-random number generator.

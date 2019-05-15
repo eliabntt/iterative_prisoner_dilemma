@@ -1,3 +1,6 @@
+# Copyright (C) 2019 Elia Bonetto, Filippo Rigotto, Luca Attanasio, Francesco Savio
+# Under MIT license: see LICENSE file in root directory
+
 import numpy as np
 def generatePayoffMatrix(max=20, use_positive=True):
     """Generates a valid payoff matrix for the IPD problem."""
